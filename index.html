@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+
+  <title>ImmoCalc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Calculatrice de prêt immobilier">
+  <meta name="author" content="Pierre Haessig">
+
+  <link rel="stylesheet" href="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" />
+  <script src="./jquery-2.1.1.js"></script>
+  <script src="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+  
+  <script src='./immocalc.js'></script>
+  <link rel="stylesheet" href="./immocalc.css" />
+
+</head>
+
+<body>
+  <section id='main-page' data-role="page">
+  
+    <header data-role="header">
+      <h1>Calculette de prêt immobilier</h1>
+      <a href="#settings" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear">Options</a>
+    </header>
+    
+    <div data-role="content">
+    
+      <p>
+        <em>La calculette pour les prêts immobiliers à taux fixe.</em>
+      </p>
+      
+      <form id='paramForm'>
+        <h3 class='ui-bar ui-bar-a'>Paramètres commerciaux</h3>
+        <label for="slider-rate">Taux emprunt (%/an)</label>
+        <input type="range" name="slider-rate" id="slider-rate" value="2.5" min="1.5" max="3.5" step="0.05"/>
+        
+        <label for="slider-insur">Taux assurance (%/an)</label>
+        <input type="range" name="slider-insur" id="slider-insur" value="0.5" min="0." max="1.0" step="0.05"/>
+        
+        <h3 class='ui-bar ui-bar-a'>Choix</h3>
+        
+        <div class='slider-amort'>
+          <label for="slider-amort">Mensualité (€)</label>
+          <input type="range" name="slider-amort" id="slider-amort" value="1000" min="500" max="2000" step="10"/>
+        </div>
+        
+        <div class='slider-capital'>
+          <label for="slider-capital">Capital (k€)</label>
+          <input type="range" name="slider-capital" id="slider-capital" value="200" min="100" max="300" step="1"/>
+        </div>
+        
+        <div class='slider-duration'>
+          <label for="slider-duration">Durée (année)</label>
+          <input type="range" name="slider-duration" id="slider-duration" value="12" min="5" max="30" step="0.5"/>
+        </div>
+        
+      </form>
+      
+      <p id='output' class='ui-body ui-body-a ui-corner-all' ></p>
+      
+      
+      <form id='modeForm'>
+        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+        <legend>Que calculer ?</legend>
+          <input name="radio-calc" id="radio-amort" value="amort" checked="checked" type="radio">
+          <label for="radio-amort">Mensualité</label>
+          <input name="radio-calc" id="radio-duration" value="duration" type="radio">
+          <label for="radio-duration">Durée</label>
+          <input name="radio-calc" id="radio-capital" value="capital" type="radio">
+          <label for="radio-capital">Capital</label>
+        </fieldset>
+      </form>
+      
+    </div><!-- /content -->
+    
+    <footer data-role="footer">
+      <small>Pierre Haessig, 2014 </small>
+    </footer>
+    
+  </section><!-- /page -->
+
+  <!-- Settings -->
+  <section id='settings' data-role="page" data-dialog='true'>
+    <div data-role="header">
+      <h1>Paramètres de la Calculette</h1>
+    </div><!-- /header -->
+    
+    <div data-role="content">
+    Ici viennent les paramètres (en particulier les intervalles des sliders)
+    
+    Et puis les unités
+    </div><!-- /content -->
+  </section><!-- /page -->
+  
+
+</body>
+</html>

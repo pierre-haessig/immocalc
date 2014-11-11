@@ -1,0 +1,17 @@
+/* CSS for the Immocalc appplication */
+/* Pierre Haessig - November 2014 */
+
+
+/* Remove the spinner in Firefox number inputs */
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+h3.ui-bar {
+    font-size: 1em;
+}
+
+#main-page footer {
+    text-align: center;
+    color: #999;
+}
