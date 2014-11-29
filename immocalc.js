@@ -117,6 +117,7 @@ function computeOutput(event) {
       case 'duration':
         duration = calcDuration(capital, rate, insur, amort)
         output = 'Durée du prêt : <strong>'+ duration.toFixed(1)+'</strong> années'
+        output += ' (' + (duration*12).toFixed(0) + ' mois)'
         $('#slider-duration').val(duration).slider('refresh')
         break;
       case 'capital':
@@ -128,8 +129,19 @@ function computeOutput(event) {
         console.log('bad mode: '+mode )
     }
     
-    // Update the detailed output
-    // TODO
+    // Update the detailed cost output
+    // TODO: do only if visible
+    costTotal = amort*duration*12 - capital
+    costInsur = calcInsur(capital, insur)*duration*12
+    costInter = costTotal - costInsur
+    
+    function costFmt(cost) {
+      return Math.round(cost).toLocaleString('fr-FR') + ' €'
+    }
+    
+    $('#cost-inter').text(costFmt(costInter))
+    $('#cost-insur').text(costFmt(costInsur))
+    $('#cost-total').text(costFmt(costTotal))
     
     // display
     $('#output').html(output);

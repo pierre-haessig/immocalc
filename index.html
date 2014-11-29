@@ -74,6 +74,35 @@
         </fieldset>
       </form>
       
+      <!--Detailed costs -->
+      <div data-role="collapsible">
+        <h3 class='ui-bar ui-bar-a'>Coût total du prêt</h3>
+        
+        <table id='table-costs'>
+          <tr>
+            <td>Intérêts</td>
+            <td id='cost-inter' class='currency'>0 €</td>
+          </tr>
+          <tr>
+            <td>Assurance</td>
+            <td id='cost-insur' class='currency'>0 €</td>
+          </tr>
+          <!--
+          <tr>
+            <td>Frais divers</td>
+            <td id='cost-extra'  class='currency'>0 €</td>
+          </tr>
+          -->
+          <tr class='total'>
+            <td>Total</td>
+            <td id='cost-total' class='currency'>0 €</td>
+          </tr>
+        </table>
+        <p class='ui-body ui-body-a details'>
+          Coût hors frais de dossier, de garantie ou de caution.
+        </p>
+      </div>
+      
     </div><!-- /content -->
     
     <footer data-role="footer">
