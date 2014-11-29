@@ -4,7 +4,7 @@
 
 /* Basic formulas for load amortization */
 
-function calcAmort(K,T,Ti,y) {
+function calcAmort(K, T, Ti, y) {
     r = T/12
     n = y*12
     M = K*r/(1-1/Math.pow(1+r,n))
@@ -13,14 +13,14 @@ function calcAmort(K,T,Ti,y) {
     return M
 }
 
-function calcCapital(M,T,Ti,y) {
+function calcCapital(M, T, Ti, y) {
     r = T/12
     n = y*12
     K = M/(r/(1-1/Math.pow(1+r,n)) + Ti/12 )
     return K
 }
 
-function calcDuration(K,T,Ti, M) {
+function calcDuration(K, T, Ti, M) {
     // Insurance:
     M = M - K*Ti/12
     r = T/12
@@ -29,6 +29,10 @@ function calcDuration(K,T,Ti, M) {
     return y
 }
 
+function calcInsur(K, Ti) {
+    // How much insurance per month
+    return K * Ti/12
+}
 
 /* Mode switching logic */
 /* 3 computation modes: amortization, duration or capital*/
@@ -91,12 +95,12 @@ function computeOutput(event) {
     
     console.log('Compute ouput');
     
-    // Grab all variables:
-    var rate = $('#slider-rate').val()
-    var insur = $('#slider-insur').val()
+    // Grab all variables, with unit conversion
+    var rate = $('#slider-rate').val()/100
+    var insur = $('#slider-insur').val()/100
     var amort = $('#slider-amort').val()
     var duration = $('#slider-duration').val()
-    var capital = $('#slider-capital').val()
+    var capital = $('#slider-capital').val()*1000
     //console.log('rate ' + rate + ' insur ' + insur)
     
     
@@ -105,23 +109,27 @@ function computeOutput(event) {
     
     switch (mode) {
       case 'amort':
-        M = calcAmort(capital*1000, rate/100, insur/100, duration)
-        output = 'Mensualité : <strong>' + M.toFixed(2) +'</strong> €/mois'
-        $('#slider-amort').val(M).slider('refresh')
+        amort = calcAmort(capital, rate, insur, duration)
+        output = 'Mensualité : <strong>' + amort.toFixed(0) +'</strong> €/mois'
+        output += ', dont ' + calcInsur(capital, insur).toFixed(0) + ' € d\'assurance'
+        $('#slider-amort').val(amort).slider('refresh')
         break;
       case 'duration':
-        y = calcDuration(capital*1000, rate/100, insur/100, amort)
-        output = 'Durée du prêt : <strong>'+ y.toFixed(1)+'</strong> années'
-        $('#slider-duration').val(y).slider('refresh')
+        duration = calcDuration(capital, rate, insur, amort)
+        output = 'Durée du prêt : <strong>'+ duration.toFixed(1)+'</strong> années'
+        $('#slider-duration').val(duration).slider('refresh')
         break;
       case 'capital':
-        K = calcCapital(amort, rate/100, insur/100, duration)
-        output = 'Capital empruntable : <strong>' + (K/1000).toFixed(1) + '<strong> k€'
-        $('#slider-capital').val(K/1000).slider('refresh')
+        capital = calcCapital(amort, rate, insur, duration)
+        output = 'Capital empruntable : <strong>' + (capital/1000).toFixed(1) + '<strong> k€'
+        $('#slider-capital').val(capital/1000).slider('refresh')
         break;
       default:
         console.log('bad mode: '+mode )
     }
+    
+    // Update the detailed output
+    // TODO
     
     // display
     $('#output').html(output);
