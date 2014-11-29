@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128"
+   height="128"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="house-icon.svg"
+   inkscape:export-filename="house-icon-512.png"
+   inkscape:export-xdpi="360"
+   inkscape:export-ydpi="360">
+  <title
+     id="title3795">House loan calculator icon</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="331.55121"
+     inkscape:cy="82.959455"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="741"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="8"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       spacingx="8px"
+       spacingy="8px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>House loan calculator icon</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Pierre Haessig</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-924.36218)">
+    <path
+       style="fill:#cc0000;fill-opacity:1;stroke:none"
+       d="m 64,8 -48,48 8,0 0,56 80,0 0,-56 8,0 z"
+       id="path2987"
+       inkscape:connector-curvature="0"
+       transform="translate(0,924.36218)"
+       sodipodi:nodetypes="cccccccc" />
+    <g
+       style="font-size:53.97718811px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       id="text3789">
+      <path
+         d="m 77.5841,1011.0463 c -1.528689,0 -2.732281,0.6501 -3.610779,1.9503 -0.860999,1.3003 -1.291481,3.11 -1.291446,5.4294 -3.5e-5,2.2842 0.430447,4.0851 1.291446,5.4029 0.878498,1.3003 2.08209,1.9504 3.610779,1.9504 1.493468,0 2.670704,-0.6501 3.53171,-1.9504 0.878492,-1.3178 1.317759,-3.1187 1.317803,-5.4029 -4.4e-5,-2.3018 -0.439311,-4.1028 -1.317803,-5.403 -0.861006,-1.3178 -2.038242,-1.9767 -3.53171,-1.9767 m 0,-3.3473 c 2.776128,1e-4 4.981249,0.9664 6.615368,2.8992 1.634028,1.9328 2.451064,4.542 2.451113,7.8278 -4.9e-5,3.2857 -0.825871,5.8949 -2.477469,7.8277 -1.634119,1.9152 -3.830454,2.8728 -6.589012,2.8728 -2.811349,0 -5.03404,-0.9576 -6.668081,-2.8728 -1.634106,-1.9328 -2.451142,-4.542 -2.451112,-7.8277 -3e-5,-3.3033 0.817006,-5.9126 2.451112,-7.8278 1.651612,-1.9328 3.874303,-2.8991 6.668081,-2.8992 M 50.384657,991.64821 c -1.51109,3e-5 -2.705897,0.65893 -3.584422,1.9767 -0.860972,1.30027 -1.291454,3.09247 -1.291447,5.37663 -7e-6,2.31936 0.430475,4.12916 1.291447,5.42936 0.860955,1.3002 2.055761,1.9504 3.584422,1.9503 1.528638,10e-5 2.723444,-0.6501 3.584423,-1.9503 0.878518,-1.3002 1.317785,-3.11 1.317802,-5.42936 -1.7e-5,-2.26658 -0.439284,-4.05879 -1.317802,-5.37663 -0.87855,-1.31777 -2.073356,-1.97667 -3.584423,-1.9767 m 23.799512,-3.34722 4.216968,0 -24.616549,40.82551 -4.216968,0 24.616549,-40.82551 m -23.799512,0 c 2.776156,4e-5 4.990062,0.96643 6.641725,2.89916 1.651625,1.91525 2.477447,4.51571 2.477468,7.80139 -2.1e-5,3.32086 -0.825843,5.93896 -2.477468,7.85406 -1.634092,1.9153 -3.847998,2.8729 -6.641725,2.8729 -2.79375,0 -5.007656,-0.9576 -6.641724,-2.8729 -1.616508,-1.9327 -2.42476,-4.5507 -2.424757,-7.85406 -3e-6,-3.26811 0.817034,-5.86857 2.451113,-7.80139 1.634068,-1.93273 3.839189,-2.89912 6.615368,-2.89916"
+         style="fill:#ffffff;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         id="path3817" />
+    </g>
+    <path
+       style="fill:#ef2929;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="M 16,56 64,8 112,56 z"
+       id="path3793"
+       inkscape:connector-curvature="0"
+       transform="translate(0,924.36218)" />
+  </g>
+</svg>

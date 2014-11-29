@@ -1,0 +1,14 @@
+{
+  "name": "ImmoCalc",
+  "description": "Calculatrice de prêts immobiliers",
+  "launch_path": "/immocalc/index.html",
+  "icons": {
+    "512": "/immocalc/img/house-icon-512.png",
+    "128": "/immocalc/img/house-icon-128.png"
+  },
+  "developer": {
+    "name": "Pierre Haessig",
+    "url": "http://pierreh.eu"
+  },
+  "default_locale": "fr"
+}
