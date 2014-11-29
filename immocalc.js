@@ -70,7 +70,6 @@ function initCalcMode() {
     // Force computing the ouput
     computeOutput()
   }
-  
 
 
 /* React to input value changes: recompute the output */
@@ -145,19 +144,59 @@ function computeOutput(event) {
     
     // display
     $('#output').html(output);
+    
+    // save
+    loan = {
+        'rate':rate,
+        'insur':insur,
+        'amort':amort,
+        'duration':duration,
+        'capital':capital
+        }
+    saveState(loan)
 }
 
 
+/*Save and restore state*/
+function saveState(loan) {
+    localStorage['loan'] = JSON.stringify(loan)
+    localStorage['mode'] = getCalcMode()
+}
+
+function restoreState() {
+    loan = localStorage['loan']
+    mode = localStorage['mode']
+    if (!loan || !mode) {
+        console.log('no state to restore')
+        return
+    }
+    
+    loan = JSON.parse(loan)
+    console.log(loan)
+    
+    // set all sliders:
+    $('#slider-rate').val(loan.rate*100).slider('refresh')
+    $('#slider-insur').val(loan.insur*100).slider('refresh')
+    $('#slider-amort').val(loan.amort).slider('refresh')
+    $('#slider-duration').val(loan.duration).slider('refresh')
+    $('#slider-capital').val(loan.capital/1000).slider('refresh')
+    console.log('Previous state restored')
+}
+
+
+/* Initialization after page load*/
 function initApp() {
     // take the sliders out of the tab navigation
     $('.ui-slider-handle').attr('tabindex', '-1');
     
-    $("#modeForm input[type=radio]").change(initCalcMode);
+    // Restore state, before connecting event handlers
+    restoreState()
     
+    // Connect event handlers:
+    $("#modeForm input[type=radio]").change(initCalcMode);
     $('#paramForm input').change(computeOutput);
     
     initCalcMode();
-
 }
 
 $(document).on("pagecreate", "#main-page", initApp)
