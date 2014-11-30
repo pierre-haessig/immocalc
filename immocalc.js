@@ -183,11 +183,52 @@ function restoreState() {
     console.log('Previous state restored')
 }
 
+/*App installation management*/
+
+function checkAppInstallation() {
+    if (! ("mozApps" in navigator) ) {
+        // no ability to install Apps
+        return
+    }
+    if (navigator.userAgent.search('Mobile') == -1 &&
+        navigator.userAgent.search('Tablet') == -1) {
+        // not on a Mobile platform
+        return
+    }
+    // else, check if the app is installed or not.
+    var request = window.navigator.mozApps.getSelf();
+    request.onsuccess = function() {
+        if (request.result) {
+        // App is installed. Fine.
+        console.log('App is installed');
+        } else {
+        console.log('App is not installed');
+        $('#install-webapp-panel').show()
+        }
+    };
+}
+
+function installApp() {
+    manifestUrl = 'http://éole.net/immocalc/manifest.webapp'
+    var request = window.navigator.mozApps.install(manifestUrl);
+    request.onsuccess = function () {
+        // Save the App object that is returned
+        var appRecord = this.result;
+        alert('Installation successful!');
+    };
+    request.onerror = function () {
+        // Display the error information from the DOMError object
+        alert('Install failed, error: ' + this.error.name);
+    };
+}
+
 
 /* Initialization after page load*/
 function initApp() {
     // take the sliders out of the tab navigation
     $('.ui-slider-handle').attr('tabindex', '-1');
+    
+    checkAppInstallation()
     
     // Restore state, before connecting event handlers
     restoreState()
@@ -197,6 +238,7 @@ function initApp() {
     $('#paramForm input').change(computeOutput);
     
     initCalcMode();
+    
 }
 
 $(document).on("pagecreate", "#main-page", initApp)
