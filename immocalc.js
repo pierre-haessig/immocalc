@@ -195,6 +195,10 @@ function checkAppInstallation() {
         // not on a Mobile platform
         return
     }
+    if (navigator.userAgent.search('Android') != -1) {
+        // exclude Firefox for Android, because the APK conversion seems broken at the moment.
+        return
+    }
     // else, check if the app is installed or not.
     var request = window.navigator.mozApps.getSelf();
     request.onsuccess = function() {
