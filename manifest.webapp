@@ -4,7 +4,8 @@
   "launch_path": "/immocalc/index.html",
   "icons": {
     "512": "/immocalc/img/house-icon-512.png",
-    "128": "/immocalc/img/house-icon-128.png"
+    "128": "/immocalc/img/house-icon-128.png",
+    "60":  "/immocalc/img/house-icon-60.png"
   },
   "developer": {
     "name": "Pierre Haessig",
